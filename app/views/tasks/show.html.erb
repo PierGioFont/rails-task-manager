@@ -1,0 +1,27 @@
+<h1 align="center">This is your Task manager application</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+
+<h2>
+  <strong>This task is:</strong>
+  <%= @task.description %>
+</h2>
+<h2>
+  <strong>Status done:</strong>
+  <%= @task.status %>
+</h2>
+<h2>
+  <strong>Priority level:</strong>
+  <%= @task.priority %>
+</h2>
+<h2>
+  <strong>Owner:</strong>
+  <%= @task.owner %>
+</h2>
+
+<div class="actions">
+  <%= link_to "Edit", edit_task_path %>
+  <%= link_to "Back to list", root_path %>
+  <%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</div>

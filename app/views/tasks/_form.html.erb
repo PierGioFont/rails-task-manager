@@ -1,0 +1,25 @@
+<h1>
+  Insert a new Task to do:
+</h1>
+
+<div class="question" align="center">
+  <%= form_for(@task) do |t| %>
+  <div class="descri">
+    <%= t.label :description %>
+    <%= t.text_field :description %>
+  </div>
+      <%= t.label :status %>
+      <%= t.check_box :status %>
+      <br>
+      <%= t.label :priority %>
+      <%= t.number_field :priority %>
+      <br>
+      <%= t.label :owner %>
+      <%= t.text_field :owner %>
+      <br>
+      <div class="btn">
+        <%= t.submit %>
+      </div>
+    <% end %>
+
+</div>

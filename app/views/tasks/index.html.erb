@@ -1,0 +1,14 @@
+<h1 align="center">This is your Task manager application</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+<div class="text-center">
+  <ul class="list">
+    <% @tasks.each do |task| %>
+      <li>
+        <%= task.description %>
+        <%= link_to "View Task", task_path(task.id) %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add new", new_task_path %>
+</div>
